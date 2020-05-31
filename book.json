@@ -19,8 +19,8 @@
         "-sharing",
         "-github-buttons",
         "-donate",
-        "tbfed-pagefooter",
-        "baidu-tongji",
+        "-tbfed-pagefooter",
+        "-baidu-tongji",
         "anchor-navigation-ex",
         "fontsettings"
     ],

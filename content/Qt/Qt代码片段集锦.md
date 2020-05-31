@@ -1,10 +1,4 @@
-<!-- TOC -->
-
-- [递归遍历目录](#递归遍历目录)
-
-<!-- /TOC -->
-
-## 递归遍历目录
+# 递归遍历目录
 
 ```c++
 //参数含义（当前遍历目录、当前遍历目录上一级目录name、记录当前目录相对于顶级父目录深度）
@@ -28,7 +22,7 @@ bool reverseDir(const QDir& dir,QString parentName,int parentLevel)
         }
         else //当前为文件
         {
-           ...   
+           ...
         }
     }
     return 1;

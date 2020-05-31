@@ -1,13 +1,11 @@
-&emsp; &emsp; 之前使用过 csdn 写过 blog，但是之前自己糟糕的排版，渐渐打消了我坚持下去的动力，直到最近，开始使用 vscode，然后又学了一下 markdown，才让我产生了重新开始写 blog 的想法；
-&emsp; &emsp; 一开始选用了 Jekyll，但是 Jekyll 框架下实在很难找到一个吸引人的主题，之前做了一个，但感觉实在很一般，于是开始使用 hexo；
-&emsp; &emsp; 配置 hexo 的过程实在不是一个开心的过程，差不过花了一整天，一个周末，就这样莫名其妙的过去了一大半，所以我觉得有必要整理一下自己在这个过程中的探索；
+ &emsp; &emsp; 配置 hexo 的过程实在不是一个开心的过程，差不过花了一整天，一个周末，就这样莫名其妙的过去了一大半，所以我觉得有必要整理一下自己在这个过程中的探索；  
 
-## 创建 github page Repositories
+# 创建 github page Repositories
 
 &emsp; &emsp; 创建一个 Repositories，必须是 username.github.io 的形式，username 是你的 github 账号用户名，主要起到 github pages 部署 blog 时的识别作用；
 &emsp; &emsp; 然后选择 Repositories 对应的 settings，选择 Choose a theme, 在这一步我们可以下载一个初始的主题，验证一下是否 github pages 已经发布成功！
 
-## 生成 SSH 添加到 Github
+# 生成 SSH 添加到 Github
 
 &emsp; &emsp; 这一步主要是针对 github 新手而言，以下操作都在 git bash 完成：
 
@@ -41,7 +39,7 @@ ssh -T git@github.com
 
 &emsp; &emsp; 为什么需要 ssh 呢？简单来讲，就是一个秘钥，其中，id_rsa 是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub 是公共秘钥，可以随便给别人看。把这个公钥放在 GitHub 上，这样当你链接 GitHub 自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过 git 上传你的文件到 GitHub 上。对于初次在当前电脑使用 github 同步代码，这一步必不可少；
 
-## Hexo 安装
+# Hexo 安装
 
 &emsp; &emsp; Hexo 建站当然需要安装 Hexo，要安装 Hexo 那么首先又要安装 npm[^1]，而安装 npm 通常我们通常通过安装 Node.js 环境安装，至于 Node.js 环境安装网上资料多如牛毛，这里就不再具体介绍；以下操作均在终端中进行；
 
@@ -51,7 +49,7 @@ npm install -g hexo-cli
 
 &emsp; &emsp; 这里的-g 是指全局安装，一般情况下，我们在安装了 Node.js 之后，需要设置一个全局安装路径：所有使用 npm 下载的软件包都会下到该路径下，同时该路径也需要加入到环境变量中，这样无论在任一路径下，打开终端，我们都可以使用相应命令；
 
-## Hexo 建站
+# Hexo 建站
 
 &emsp; &emsp; 在想要建站的目录，打开终端，进行以下操作：
 
@@ -95,7 +93,7 @@ Hexo s --debug
 
 &emsp; &emsp; 点击对应网址，即可看到效果了；
 
-## next 模板
+# next 模板
 
 &emsp; &emsp; 关于 next 模板使用的大部分技巧，在这个<a href="http://theme-next.iissnan.com/getting-started.html">链接</a>中都可以找到答案，但是这里面提供的 next 下载模板虽然自由度比较大，但是对于那些并不擅长前段开发的人来说，想要快速使用，同时又要保证效果尚佳的人来说，还是有一定难度，所以我推荐使用在 next 模板上已经进行一定程度开发的成熟模板，对于程序员来说这也是一种可以接受的做法：尽量找轮子，而非造轮子；
 &emsp; &emsp; 这是我使用的<a href ="https://github.com/WordZzzz/hexo-next">模板</a>，这个哥们效果做的还是很丰富的，以至于我不得不屏蔽了部分效果；
@@ -106,7 +104,7 @@ Hexo s --debug
 - 在 next 配置文件中，选择了一些菜单项，例如分类、标签，但是在预览时，点击菜单异常；<a herf = "https://blog.csdn.net/mqdxiaoxiao/article/details/93644533">解决方案</a>
 - next 模板的网站访问过慢！<a herf = "https://www.jianshu.com/p/95a8a7f70457">解决方案</a>
 
-## Hexo 部署到 github pages
+# Hexo 部署到 github pages
 
 &emsp; &emsp; 这里体现了 Jekyll 和 Hexo 一个很大的不同：前者其站点的基础建站文件和 github page 对应的仓库文件是一样的，我们甚至可以修好 md 后直接放到其\_post 目录，刷新网页即可看到更新；后者 github page 对应仓库的文件实际是建站文件经过 hexo 编译后上传的文件；
 &emsp; &emsp; 所以对于 Hexo，建议使用两个仓库，一个用于发布 Github pages，另一个则用于同步基础的建站文件，每次建站仓库部署后发布到前者上面；
@@ -152,7 +150,7 @@ hexo d -g
 
 &emsp; &emsp; 此时我们可以不用 hexo clean，hexo d -g 会识别增量渲染，不会全部重新生成，感觉更安全一点；
 
-## 关于 hexo 中的其他问题
+# 关于 hexo 中的其他问题
 
 - hexo 中 markdown 的语法区别；
 
