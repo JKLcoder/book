@@ -4,6 +4,7 @@
 * [c++]()
     * [C++中概念对比](content/c++/C++中概念对比.md)
     * [IO类](content/c++/IO类.md)
+    * [swap函数](content/c++/swap函数.md)
     * [关于数组](content/c++/关于数组.md)
     * [关键字const](content/c++/关键字const.md)
     * [函数传参](content/c++/函数传参.md)
