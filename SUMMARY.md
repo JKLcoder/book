@@ -18,6 +18,7 @@
 * [JavaScript]()
     * [JavaScript基础知识](content/JavaScript/JavaScript基础知识.md)
 * [opencv]()
+    * [像素遍历](content/opencv/像素遍历.md)
 * [Qt]()
     * [Qt中异常问题集锦](content/Qt/Qt中异常问题集锦.md)
     * [Qt代码片段集锦](content/Qt/Qt代码片段集锦.md)
